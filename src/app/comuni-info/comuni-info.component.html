@@ -1,0 +1,27 @@
+
+  <div class="container">
+    <h2 class="mb-5">Info Comune</h2>
+  <form class="row g-3 needs-validation" >
+    <div class="col-md-4">
+      <label for="id" class="form-label">Id</label>
+      <input type="number" class="form-control"  [(ngModel)]="selCom.id" name="id" >
+    </div>
+    <div class="col-md-4">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" [(ngModel)]="selCom.nome" name="nome">
+    </div>
+    <div class="col-md-4">
+      <label for="nomeProvincia" class="form-label">Provincia</label>
+       <select  [(ngModel)]="selCom.provincia" name="provincia" class="form-select" >
+        <option selected>{{selCom.provincia.nome}}</option>
+        <option *ngFor="let item of province" [ngValue]="item" >{{item.nome}}</option>
+      </select>
+      <!--<div class="input-group has-validation">
+        <input type="text" class="form-control" [(ngModel)]="selCom.provincia.nome" name="nomeProvincia">
+      </div>-->
+    </div>
+    <div class="col-12">
+      <button class="btn btn-warning" type="submit" (click)="update()">Aggiorna</button>
+    </div>
+  </form>
+</div>

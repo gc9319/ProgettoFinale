@@ -1,0 +1,23 @@
+
+  <div class="container">
+    <h2 class="mb-5">Nuovo Comune</h2>
+  <form class="row g-3 needs-validation" >
+    <div class="col-md-4">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" [(ngModel)]="newCom.nome" name="nome">
+    </div>
+    <div class="col-md-4">
+      <label for="nomeProvincia" class="form-label">Provincia</label>
+      <select  [(ngModel)]="newCom.provincia" name="provincia" class="form-select" aria-label="Default select example">
+        <option selected></option>
+        <option *ngFor="let item of province" [ngValue]="item" >{{item.nome}}</option>
+      </select>
+      <!--<div class="input-group has-validation">
+        <input type="text" class="form-control" [(ngModel)]="newCom.provincia.nome" name="nomeProvincia">
+      </div>-->
+    </div>
+  </form>
+  <div class="col-12">
+    <button class="btn btn-success mt-3" type="submit" (click)="new()">Salva</button>
+  </div>
+</div>

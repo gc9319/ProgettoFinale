@@ -1,0 +1,39 @@
+
+  <div class="container">
+    <h2 class="mb-5">Info Fattura</h2>
+  <form class="row g-3 needs-validation" >
+    <div class="col-md-2">
+      <label for="idContatto" class="form-label">Id</label>
+      <input type="number" class="form-control"  [(ngModel)]="selFat.id" name="id" >
+    </div>
+    <div class="col-md-7">
+      <label for="cliente" class="form-label">Cliente</label>
+      <input type="text" class="form-control" [(ngModel)]="selFat.cliente.ragioneSociale" name="ragioneSociale">
+    </div>
+    <div class="col-md-2">
+      <label for="numero" class="form-label">Numero</label>
+      <div class="input-group has-validation">
+        <input type="text" class="form-control" [(ngModel)]="selFat.numero" name="numero" aria-describedby="inputGroupPrepend">
+      </div>
+    </div>
+    <div class="col-md-2">
+      <label for="anno" class="form-label">Anno</label>
+      <input type="text" class="form-control" [(ngModel)]="selFat.anno" name="emailContatto">
+    </div>
+    <div class="col-md-5">
+      <label for="importo" class="form-label">Importo</label>
+      <input type="text" class="form-control" [(ngModel)]="selFat.importo" name="importo">
+    </div>
+    <div class="col-md-4">
+      <label for="Stato" class="form-label">Stato</label>
+      <input type="text" class="form-control" [(ngModel)]="selFat.stato.nome" name="stato">
+    </div>
+    <div class="col-md-2">
+      <label for="data" class="form-label">Data</label>
+      <input type="text" class="form-control"  [(ngModel)]="selFat.data" [ngModel]="selFat.data | date: 'dd/MM/yyyy'" name="data">
+    </div>
+  </form>
+  <div class="col-12">
+    <button class="btn btn-warning mt-3" type="submit" (click)="update()">Aggiorna</button>
+  </div>
+</div>

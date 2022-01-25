@@ -1,0 +1,19 @@
+
+  <div class="container">
+    <h2 class="mb-5">Info Provincia</h2>
+  <form class="row g-3 needs-validation" >
+    <div class="col-md-4">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" [(ngModel)]="selPro.nome" name="nome" required>
+    </div>
+    <div class="col-md-4">
+      <label for="sigla" class="form-label">Sigla</label>
+      <div class="input-group has-validation">
+        <input type="text" class="form-control" [(ngModel)]="selPro.sigla" name="sigla" aria-describedby="inputGroupPrepend" required>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-warning" type="submit" (click)="update()">Aggiorna</button>
+    </div>
+  </form>
+</div>

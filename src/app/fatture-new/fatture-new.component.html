@@ -1,0 +1,38 @@
+
+  <div class="container">
+    <h2 class="mb-5">Nuova Fattura</h2>
+  <form class="row g-3 needs-validation" >
+    <div class="col-md-7">
+      <label for="cliente" class="form-label">Cliente</label>
+      <select  [(ngModel)]="newFat.cliente.ragioneSociale" name="nomeCliente" class="form-select" >
+        <option selected ></option>
+        <option *ngFor="let item of clients" [ngValue]="item" >{{item.ragioneSociale}}</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="numero" class="form-label">Numero</label>
+      <div class="input-group has-validation">
+        <input type="text" class="form-control" [(ngModel)]="newFat.numero" name="numero" aria-describedby="inputGroupPrepend">
+      </div>
+    </div>
+    <div class="col-md-2">
+      <label for="anno" class="form-label">Anno</label>
+      <input type="text" class="form-control" [(ngModel)]="newFat.anno" name="emailContatto">
+    </div>
+    <div class="col-md-5">
+      <label for="importo" class="form-label">Importo</label>
+      <input type="text" class="form-control" [(ngModel)]="newFat.importo" name="importo">
+    </div>
+    <div class="col-md-4">
+      <label for="Stato" class="form-label">Stato</label>
+      <input type="text" class="form-control" [(ngModel)]="newFat.stato.nome" name="stato">
+    </div>
+    <div class="col-md-2">
+      <label for="data" class="form-label">Data</label>
+      <input type="text" class="form-control"  [(ngModel)]="newFat.data" name="data">
+    </div>
+  </form>
+  <div class="col-12">
+    <button class="btn btn-success mt-3" type="submit" (click)="new()">Salva</button>
+  </div>
+</div>
